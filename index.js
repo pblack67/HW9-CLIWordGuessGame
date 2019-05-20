@@ -8,7 +8,7 @@ function getRandomWord() {
 }
 
 function inputLetter() {
-    console.log(word.toString());
+    console.log(word.toString() + "\n");
     inquirer.prompt([
         {
             type: 'input',
@@ -17,10 +17,14 @@ function inputLetter() {
         }
     ])
     .then(answers => {
-        word.guessLetter(answers.letter);
+        if (word.guessLetter(answers.letter)) {
+            console.log("\nCORRECT!!!\n");
+        } else {
+            console.log("\nINCORRECT!!!\n");
+        }
         if (word.isWordGuessed()) {
-            console.log(word.toString());
-            console.log("CORRECT! You're great!");
+            console.log(word.toString() + "\n");
+            console.log("CORRECT! You're great! Next word...\n");
             word = new Word(getRandomWord());
         }
         inputLetter();

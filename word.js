@@ -16,7 +16,7 @@ function Word(word) {
     }
     this.guessLetter = function(letter) {
         this.letters.forEach(element => {
-            element.guessLetter(letter);
+            return element.guessLetter(letter);
         });
     }
     this.isWordGuessed = function() {
