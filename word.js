@@ -19,16 +19,14 @@ function Word(word) {
             element.guessLetter(letter);
         });
     }
+    this.isWordGuessed = function() {
+        for (let i = 0; i < this.letters.length; i++) {
+            if (!this.letters[i].isGuessed) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
 
 module.exports = Word;
-
-// let word = new Word("Game of Thrones");
-// // console.log(word);
-// console.log(word.toString());
-// word.guessLetter("e");
-// console.log(word.toString());
-// word.guessLetter("m");
-// console.log(word.toString());
-// word.guessLetter("h");
-// console.log(word.toString());

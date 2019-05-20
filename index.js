@@ -8,6 +8,7 @@ function getRandomWord() {
 }
 
 function inputLetter() {
+    console.log(word.toString());
     inquirer.prompt([
         {
             type: 'input',
@@ -17,7 +18,11 @@ function inputLetter() {
     ])
     .then(answers => {
         word.guessLetter(answers.letter);
-        console.log(word.toString());
+        if (word.isWordGuessed()) {
+            console.log(word.toString());
+            console.log("CORRECT! You're great!");
+            word = new Word(getRandomWord());
+        }
         inputLetter();
     });
 }
