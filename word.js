@@ -21,6 +21,8 @@ function Word(word) {
     }
 }
 
+module.exports = Word;
+
 // let word = new Word("Game of Thrones");
 // // console.log(word);
 // console.log(word.toString());
@@ -30,4 +32,3 @@ function Word(word) {
 // console.log(word.toString());
 // word.guessLetter("h");
 // console.log(word.toString());
-

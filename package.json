@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/pblack67/HW9-CLIWordGuessGame/issues"
   },
-  "homepage": "https://github.com/pblack67/HW9-CLIWordGuessGame#readme"
+  "homepage": "https://github.com/pblack67/HW9-CLIWordGuessGame#readme",
+  "dependencies": {
+    "inquirer": "^6.3.1"
+  }
 }
