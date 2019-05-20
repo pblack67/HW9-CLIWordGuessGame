@@ -7,19 +7,25 @@ function Word(word) {
     myLetters.forEach(letter => {
         this.letters.push(new Letter(letter));
     });
-    this.toString = function() {
+    this.toString = function () {
         let result = "";
         this.letters.forEach(element => {
             result += element + " ";
         });
         return result;
     }
-    this.guessLetter = function(letter) {
+    this.guessLetter = function (letter) {
+        let successfulGuess = false;
         this.letters.forEach(element => {
-            return element.guessLetter(letter);
+            if (element.underlyingLetter !== " "
+                && element.guessLetter(letter)) {
+                console.log("Successful guess!");
+                successfulGuess = true;
+            }
         });
+        return successfulGuess;
     }
-    this.isWordGuessed = function() {
+    this.isWordGuessed = function () {
         for (let i = 0; i < this.letters.length; i++) {
             if (!this.letters[i].isGuessed) {
                 return false;
