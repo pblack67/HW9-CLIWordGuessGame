@@ -1,6 +1,9 @@
 const Word = require("./word");
 const inquirer = require("inquirer");
-const words = ["Game of Thrones", "Pollywoggle", "Transmogrify"];
+const words = ["Game of Thrones", "NCIS", "New Amsterdam", "The Blacklist", "MARS",
+    "Deadliest Catch", "The Last Alaskans", "The Gifted", "Saturday Night Live", "Veep", 
+    "Big Bang Theory", "The Walking Dead", "Better Call Saul", "The X Factor", "American Idol",
+    "Dancing With the Stars", "The Amazing Race", "Survivor"];
 let word = "";
 let numberOfGuesses = 0;
 let guesses = [];
@@ -8,7 +11,7 @@ let guesses = [];
 function randomizeWord() {
     let randomWord = words[Math.floor(Math.random() * words.length)];
     word = new Word(randomWord);
-    numberOfGuesses = randomWord.length + Math.floor(randomWord.length * 0.25);
+    numberOfGuesses = randomWord.length + Math.ceil(randomWord.length * 0.25);
     guesses = [];
 }
 
@@ -42,7 +45,7 @@ function inputLetter() {
                     }
                 }
             } else {
-                console.log(`\nYou already guessed ${answers.letter}\n`);
+                console.log(`\nYou already guessed ${answers.letter}. Please select another letter.\n`);
             }
             inputLetter();
         });
