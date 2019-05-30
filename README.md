@@ -1,11 +1,16 @@
 # CLIWordGuessGame
 
+## Video Overview
+
+[CLIWordGuessGame Video Overview](https://youtu.be/Y6eawXJBjWI)
+
+
+## Overview
+
 * Command to run the application: node ./index.js
 
 * Technologies used: JavaScript, Node, Constructors, Modules, Inquirer
 
-## Overview
- 
 This is a command line interface guessing game with a theme of TV shows. It simply asks the user to guess a letter. After each guess it informs the user of whether their guess was correct. Then it reflects a correct answer by revealing all the occurrences of the letter. It then asks the user for the next guess up until the user runs out of guesses or reveals the last unknown letter.
 
 ## Architecture

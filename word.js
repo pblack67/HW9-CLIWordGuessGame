@@ -19,8 +19,9 @@ function Word(word) {
         this.letters.forEach(element => {
             if (element.underlyingLetter !== " "
                 && element.guessLetter(letter)) {
-                console.log("Successful guess!");
-                successfulGuess = true;
+                if (!successfulGuess) {
+                    successfulGuess = true;
+                }
             }
         });
         return successfulGuess;
