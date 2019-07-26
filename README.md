@@ -4,6 +4,8 @@
 
 [CLIWordGuessGame Video Overview](https://youtu.be/Y6eawXJBjWI)
 
+![Word Game](/images/wordgame.png)
+
 
 ## Overview
 
